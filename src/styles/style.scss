@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+}
+
+.container {
+    max-width: 60%;
+    min-height: 80vh;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .frame {
+        background-color: rgba(0, 0, 0, .4);
+        border-radius: 10px;
+        padding: 50px;
+        color: #ffffff;
+
+        &__title {
+            font-weight: 400;
+        }
+
+        .form {
+            margin-top: 20px;
+            display: flex;
+
+            &__date {
+                height: 37px;
+            }
+
+            &__left {
+                width: 50%;
+            }
+            
+            
+            &__right {
+                width: 50%;
+            }
+
+
+            &__label {
+                margin-top: 15px;
+            }
+
+            &__name {
+                    position: relative;
+
+                    &::before {
+                        content: '*';
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                    }
+                }
+
+            &__input {
+                width: 80%;
+                margin-top: 10px;
+                padding: 7px;
+                border: none;
+                border-radius: 10px;
+                font-size: 20px;
+                background-color: rgba(255, 255, 255, .3);
+                outline: none;
+                color: #ffffff;
+            }
+
+            .form__select {
+                width: 80%;
+            }
+
+            &__option {
+                color: #000000;
+            }
+
+            .check {
+                display: inline;
+                margin-right: 10px;
+
+                &__box {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    background-color: #ffffff;
+                    position: relative;
+
+                    &::before {
+                        opacity: 0;
+                        content: '✔';
+                        color: #2629e2;
+                        font-size: 23px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: opacity 0.2s linear;
+                    }
+                }
+            }
+        }
+
+        &__req {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+    }
+
+    .check__main {
+        display: none;
+    }
+
+    .check__main:checked ~ .check__box::before {
+        opacity: 1;
+    }
+
+    .form__checkTitle {
+        margin-bottom: 17px;
+    }
+
+    .multiselect {
+        margin-bottom: 20px;
+    }
+}

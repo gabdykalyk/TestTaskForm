@@ -1,0 +1,95 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; }
+
+label {
+  display: block; }
+
+.container {
+  max-width: 60%;
+  min-height: 80vh;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .container .frame {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 50px;
+    color: #ffffff; }
+    .container .frame__title {
+      font-weight: 400; }
+    .container .frame .form {
+      margin-top: 20px;
+      display: flex; }
+      .container .frame .form__date {
+        height: 37px; }
+      .container .frame .form__left {
+        width: 50%; }
+      .container .frame .form__right {
+        width: 50%; }
+      .container .frame .form__label {
+        margin-top: 15px; }
+      .container .frame .form__name {
+        position: relative; }
+        .container .frame .form__name::before {
+          content: '*';
+          position: absolute;
+          top: 0;
+          left: 100%; }
+      .container .frame .form__input {
+        width: 80%;
+        margin-top: 10px;
+        padding: 7px;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        background-color: rgba(255, 255, 255, 0.3);
+        outline: none;
+        color: #ffffff; }
+      .container .frame .form .form__select {
+        width: 80%; }
+      .container .frame .form__option {
+        color: #000000; }
+      .container .frame .form .check {
+        display: inline;
+        margin-right: 10px; }
+        .container .frame .form .check__box {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          background-color: #ffffff;
+          position: relative; }
+          .container .frame .form .check__box::before {
+            opacity: 0;
+            content: '✔';
+            color: #2629e2;
+            font-size: 23px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.2s linear; }
+    .container .frame__req {
+      margin-top: 20px;
+      font-size: 14px; }
+  .container .check__main {
+    display: none; }
+  .container .check__main:checked ~ .check__box::before {
+    opacity: 1; }
+  .container .form__checkTitle {
+    margin-bottom: 17px; }
+  .container .multiselect {
+    margin-bottom: 20px; }
+
+/*# sourceMappingURL=style.css.map */
